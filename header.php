@@ -17,7 +17,7 @@
 			<div class="twelve columns">
 				<?php wp_nav_menu(array(
 					'sort_column' => 'menu_order', 
-					'container_class' => 'blank-menu-header'
+					'container_class' => 'menu-header'
 					));?>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
 					<h1><a href="<?php 
 						$url = home_url('/'); echo $url; ?>">
 						<?php bloginfo('name'); ?></a></h1>		 <!-- dynamically add the header -->
-					<h4><?php bloginfo('description'); ?></h4> <!-- dynamically add the tagline -->
+					<h4 id="header"><?php bloginfo('description'); ?></h4> <!-- dynamically add the tagline -->
 				</article>
 			</div>
 		</div>

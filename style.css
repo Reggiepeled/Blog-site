@@ -11,6 +11,7 @@ Text Domain: reggie-peled-blog-site
 
 @import url('css/normalize.css');
 @import url('css/skeleton.css');
+@import url('css/animate.css');
 
 /* using downloaded font files */
 @font-face {
@@ -29,6 +30,16 @@ Text Domain: reggie-peled-blog-site
     line-height: 1.5em;
 }
 
+body {
+	/* adding gradient background */
+    background: -moz-linear-gradient(45deg,  #ffffff 50%, #BFB4B2 100%);
+    background: -webkit-linear-gradient(45deg,  #ffffff 50%,#BFB4B2 100%);
+    background: linear-gradient(45deg,  #ffffff 50%,#BFB4B2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#BFB4B2',GradientType=1 );
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 header {
 	background-image: url('images/workshop.jpg');
     /* adding box shadow */
@@ -37,6 +48,7 @@ header {
     box-shadow: 3px 3px 20px 0 #000;
     padding: 0 0 50px 0;
     background-size: cover;
+    margin-bottom: 10px;
 }
 
 a { 
@@ -57,24 +69,28 @@ ul {
 }
 
 /*--- Menu Styling --- */
-.blank-menu-header {
+.menu-header {
 	text-align: left;
 }
 
-.blank-menu-header ul {
+.menu-header ul {
 	margin: 20px 0 0 20px;
 	padding: 0; 
 }
 
-.blank-menu-header li {
+.menu-header li {
 	display: inline;
 }
 
-.blank-menu-header ul li a {
+.menu-header ul li a {
 	text-decoration:none;  
 	color: white;
 	margin: 0 0 0 2%;
 	font-size: 1.5rem;
+}
+
+.menu-header ul li a:hover {
+    color: pink;
 }
 
 h1 {
@@ -120,7 +136,10 @@ h4 {
     color: #5E3B59;
     font-size: 1.7rem;
     font-weight: normal;
-    background-color: white;
+}
+
+#header {
+    background-color: hsla(360, 100%, 100%, 0.85);
 }
 
 h5 {
@@ -162,25 +181,54 @@ article h4 {
 footer {
 	margin-top: 30px;
 	padding: 50px;
-	background-color: #DCDCDC;
+	background-color: #DBD6D6;
+    border-top: 2px solid hsla(309, 23%, 30%, 0.3);
+}
+
+.social img:hover {
+    filter: gray;     /* IE6-9 */
+    -webkit-filter: grayscale(1);     /* Google Chrome & Safari 6+ */
+    -moz-filter: grayscale(1);    
 }
 
 /*hide the words 'search for' in the footer */
 .screen-reader-text { 	
-	color: #DCDCDC;
+	color: #DBD6D6;
 }
 
 hr {
-	color: #DCDCDC;
+	color: #DBD6D6;
 }
 
 .wrapper {
 	padding-right: 5%;
 }
 
+.alignright {
+	text-align: right;
+}
+
+.aligncenter {
+	margin-top: 5%;
+	text-align: center;
+}
+
+.pagination, .pagination a {
+	font-size: 1rem;
+	color: #8560A8;
+}
+
+.pagination a:hover {
+	color: pink;
+} 
+
 @media (min-width: 1000px) {
 	h5 {
 		margin-top: 0;
+	}
+
+	.sideborder {
+		border-right: solid 1px gainsboro;
 	}
 }
 
